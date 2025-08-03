@@ -68,7 +68,8 @@ load_ah2:
 vga_mode:
     pusha
     mov ah, 0x00
-    mov al, 0x13
+    mov ax, 0x4F02
+    mov bx, 0x118 ; 640x480x32bpp
     int 0x10
     popa
     ret
